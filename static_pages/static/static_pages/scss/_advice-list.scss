@@ -1,0 +1,170 @@
+@import 'partials';
+
+.reg {
+   .menu-1 {
+      margin-left: 0 !important;
+   }
+}
+
+.advice-list {
+   padding: 50px;
+
+   .advice-list__title {
+      @extend %header-text;
+      color: $secondColor;
+   }
+
+   .advice-list__box {
+      width: 89.5%;
+      margin: 0 auto;
+
+      .advice-search {
+         @extend %justify-flex;
+
+         input[type=search],
+         select {
+            display: block;
+            outline: none;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid $darkColor;
+         }
+
+         input[type=search] {
+            width: 100%;
+            border-radius: 5px 0 0 0;
+            border-right: none;
+         }
+
+         select {
+            width: 20%;
+            border-radius: 0 5px 0 0;
+         }
+      }
+
+      .advice-list__info {
+         .advice-info__box {
+            @extend %list;
+         }
+
+         .advice-list__link {
+            display: block;
+            margin-top: 30px;
+            color: $secondColor;
+
+            .advice-info__title {
+               font-size: 1.8em;
+            }
+
+            .advice-info__date {
+               font-size: $mainSize - 3px;
+               font-style: italic;
+               color: $darkColor;
+            }
+
+            .advice-info__desc {
+               color: $secondColor;
+               font-size: $mainSize + 1px;
+               margin: 5px 0;
+            }
+         }
+
+         .advice-info__author {
+            font-size: $mainSize + 5px;
+            text-align: right;
+
+            a {
+               color: $primaryColor;
+
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 929px) {
+   .advice-list {
+      .advice-list__box {
+         width: 100% !important;
+
+         .advice-search {
+            select {
+               width: 30%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 699px) {
+   .advice-list {
+      .advice-list__title {
+         font-size: 1.7em;
+      }
+
+      .advice-list__box {
+         .advice-search {
+            select {
+               width: 100%;
+            }
+         }
+
+         .advice-list__info {
+            .advice-list__link {
+               .advice-info__title {
+                  font-size: 1.6em;
+               }
+
+               .advice-info__date {
+                  font-size: $mainSize - 4px;
+               }
+
+               .advice-info__desc {
+                  font-size: $mainSize;
+               }
+            }
+
+            .advice-info__author {
+               font-size: $mainSize + 3px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 459px) {
+   .advice-list {
+      padding: 50px 15px;
+
+      .advice-list__title {
+         font-size: 1.6em;
+      }
+
+      .advice-list__box {
+         .advice-search {
+            select {
+               width: 0%;
+            }
+         }
+
+         .advice-list__info {
+            .advice-list__link {
+               .advice-info__title {
+                  font-size: 1.5em;
+               }
+
+               .advice-info__desc {
+                  font-size: $mainSize - 1px;
+               }
+            }
+
+            .advice-info__author {
+               font-size: $mainSize + 1px;
+            }
+         }
+      }
+   }
+}

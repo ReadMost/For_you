@@ -1,0 +1,228 @@
+{% extends 'static_pages/parent.html' %}
+{% load static %}
+{% block title %} Qolda {% endblock %}
+{% block content %}
+
+<body>
+   <div id="app">
+      <header>
+         <div class="wrapper">
+            <div class="search-worker">
+               <input type="submit" value="Поиск">
+               <input type="search" placeholder="Найти сотрудника, найти рекомендаций">
+            </div>
+
+            <div class="adaptive-sign">
+               <ul class="adaptive-sign__list">
+                  <li><a href="{% url 'accounts:signin' %}">Вход</a></li>
+                  <li><a href="{% url 'accounts:signup' %}">Регистрация</a></li>
+               </ul>
+            </div>
+
+            <div class="logo-box">
+               <div class="logo">
+                  <p class="logo-title">
+                     <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                     Qolda
+                  </p>
+               </div>
+
+               <div class="sign">
+                  <ul class="sign-list">
+                     <li><a href="{% url 'accounts:signin' %}">Вход</a></li>
+                     <li><a href="{% url 'accounts:signup' %}">Регистрация</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="title-paren">
+               <div class="title-box">
+                  <div class="title">
+                     <h1>Мы поможем вам найти свою будущую профессию в <a href="#">один клик</a></h1>
+                     <ul class="advice">
+                        <li>Для новичков - <a href="{% url 'recommendations:index' %}">советы от профессионалов</a></li>
+                        <li>Для работодателей - <a href="{% url 'professions:all' %}">лучшая кандидатура</a></li>
+                     </ul>
+                  </div>
+                  <div class="try">
+                     <a href="{% url 'questions:index' %}">Пройти опрос</a>
+                  </div>
+               </div>
+               <!--<div class="for-phone">-->
+                  <!--<img class="overlay-image" src="../../static/static_pages/img/moqup.PNG" alt="img">-->
+                  <!--<img class="phone-img" src="../../static/static_pages/img/phone.png" alt="img">-->
+                  <!--<div class="overlay">-->
+                     <!--<a href="#">Скачать мобильную версию</a>-->
+                  <!--</div>-->
+               <!--</div>-->
+            </div>
+
+            <div class="scroll-down">
+               <a href="#scroll" uk-scroll>
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+               </a>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <section id="scroll" class="join">
+            <div class="wrapper">
+               <div class="join-title">
+                  <h2>Простые действие для успешной карьеры</h2>
+               </div>
+
+               <div class="join-list">
+                  <div class="join-list__item">
+                     <div class="join-list__img">
+                        <img src="../../static/static_pages/img/noun_estimate_1381333.png" alt="">
+                     </div>
+                     <p>Оценивайте специалистов и остовляйте свои рекомендаций для начинающих</p>
+                  </div>
+                  <div class="join-list__item">
+                     <div class="join-list__img">
+                        <img src="../../static/static_pages/img/bar-chart.png" alt="">
+                     </div>
+                     <p>Повышайте рейтинг и получите приглашение от работодателей</p>
+                  </div>
+                  <div class="join-list__item">
+                     <div class="join-list__img">
+                        <img src="../../static/static_pages/img/approved.png" alt="">
+                     </div>
+                     <p>Найдите свою профессию по душе пройдя простой опрос.</p>
+                  </div>
+               </div>
+
+               <div class="join-btn">
+                  <button class="join-btn__try" uk-toggle="target: #join-modal">Попробовать</button>
+
+                  <div id="join-modal" uk-modal>
+                     <div class="uk-modal-dialog uk-modal-body join-modal">
+                        <button class="uk-modal-close-default delete-svg" type="button" uk-close></button>
+                        <div class="join-logo">
+                           <span class="icon-handshake-icon"><span class="path1"></span><span class="path2"></span></span>
+                        </div>
+                        <div class="join-btn__box">
+                           <a class="join-modal__btn" href="{% url 'accounts:signup' %}">Вход/Регистрация</a>
+                           <a class="join-modal__btn" href="{% url 'questions:index' %}">Пройти опрос</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="info">
+            <div class="wrapper">
+               <div class="info-title">
+                  <h2>Qolda</h2>
+                  <p>
+                     Qolda - это социальный образовательный лифт который поможет вам определиться
+                     с профессией благодаря простому опросу.
+                     <!--Тут вы можете как и читать так и оставлять-->
+                     <!--рекомендаций по своей профессий, тем самым повыашя свою узнаваемость и рейтинг.-->
+                  </p>
+               </div>
+
+               <div class="info-btn">
+                  <button class="info-btn__try" uk-toggle="target: #info-modal">Попробовать</button>
+
+                  <div id="info-modal" uk-modal>
+                     <div class="uk-modal-dialog uk-modal-body join-modal">
+                        <button class="uk-modal-close-default delete-svg" type="button" uk-close></button>
+                        <div class="join-logo">
+                           <span class="icon-handshake-icon"><span class="path1"></span><span class="path2"></span></span>
+                        </div>
+                        <div class="join-btn__box">
+                           <a class="join-modal__btn" href="{% url 'accounts:signup' %}">Вход/Регистрация</a>
+                           <a class="join-modal__btn" href="{% url 'questions:index' %}">Пройти опрос</a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="instruction">
+            <div class="wrapper">
+               <div class="instruction-title">
+                  <h2>Как пользоваться?</h2>
+
+                  <ul class="instruction-box">
+                     <li class="instruction-box__item">
+                        <div class="instruction-box__content">
+                           <h3>Пройдите опрос</h3>
+
+                           <p>
+                              Пройдите опрос из нескольких вопросов и выберите свою профессию
+                              по душе. Для каждой профессий у нас найдется специалист где вы
+                              сможете почтитать его рекомендаций и начать свой новый путь
+                           </p>
+                        </div>
+
+                        <div class="instruction-box__img">
+                           <img src="../../static/static_pages/img/firststep.png">
+                        </div>
+                     </li>
+
+                     <li class="instruction-box__item">
+                        <div class="instruction-box__img">
+                           <img src="../../static/static_pages/img/secondstep.png">
+                        </div>
+
+                        <div class="instruction-box__content">
+                           <h3>Зарегистрируйте профиль</h3>
+
+                           <p>
+                              Зарегистрируйтесь на сайте, пишите рекомендаций по своей профессий
+                              оценивайте других специалистов тем самым повышая свои рейтинг перед
+                              другими сотрудниками
+                           </p>
+                        </div>
+
+                        <div class="instruction-box__img2">
+                           <img src="../../static/static_pages/img/secondstep.png">
+                        </div>
+                     </li>
+
+                     <li class="instruction-box__item">
+                        <div class="instruction-box__content">
+                           <h3>Для работодателей</h3>
+
+                           <p>
+                              Для работодателей все проще, введите в поиск вашу сферу деятельности
+                              и в списке выберите специалиста, если навыки равны, оценивайте по
+                              рейтингу и свяжитесь с ним
+                           </p>
+                        </div>
+
+                        <div class="instruction-box__img">
+                           <img src="../../static/static_pages/img/thirdstep.png">
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="instruction-btn">
+                  <button class="instruction-btn__try" uk-toggle="target: #join-modal">Попробовать</button>
+
+                  <div id="instruction-modal" uk-modal>
+                     <div class="uk-modal-dialog uk-modal-body join-modal">
+                        <button class="uk-modal-close-default delete-svg" type="button" uk-close></button>
+                        <div class="join-logo">
+                           <span class="icon-handshake-icon"><span class="path1"></span><span class="path2"></span></span>
+                        </div>
+                        <div class="join-btn__box">
+                           <a class="join-modal__btn" href="{% url 'accounts:signup' %}">Вход/Регистрация</a>
+                           <a class="join-modal__btn" href="{% url 'questions:index' %}">Пройти опрос</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+   </div>
+</body>
+{% endblock %}

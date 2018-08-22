@@ -1,0 +1,28 @@
+{% extends 'static_pages/parent.html' %}
+{% block title %} questions {% endblock %}
+{% block content %}
+{% load question_display %}
+<form action="{% url 'questions:save' %}" method="post">
+    {% csrf_token %}
+    {% if question_list %}<br>
+    <ol>
+        {% for question in question_list %}
+
+
+        <li>
+    {{question.question_text}}
+    <p>
+    <input type="radio" name="answer{{question.id}}" value="0" checked> {{ question|q_show:0 }}<br>
+    <input type="radio" name="answer{{question.id}}" value="1"> {{ question|q_show:1 }}<br>
+    </p>
+        </li>
+
+         {% endfor %}
+    </ol>
+     {%else %}
+    Some errors with database
+     {%endif%}
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

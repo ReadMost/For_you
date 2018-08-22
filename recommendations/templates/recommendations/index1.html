@@ -1,0 +1,80 @@
+{% extends 'static_pages/parent.html' %}
+{% block title %} recommendations {% endblock %}
+{% block content %}
+<div id="app">
+   <div class="profile">
+      <div class="profile-head">
+         <nav uk-sticky>
+            <div class="responsive-nav">
+               <div class="responsive-burger__menu">
+                  <div class="burger">
+                     <span></span>
+                  </div>
+                  <div class="responsive-dropdown" uk-dropdown="mode: click; pos: bottom-justify; animation: uk-animation-fade">
+                     <ul class="responsive-menu">
+                        <li>
+                           <a href="{% url 'static_pages:index' %}">Главная</a>
+                        </li>
+                        <li>
+                           <a href="#">Профориентационный тест</a>
+                        </li>
+                        <li>
+                           <a href="{% url 'accounts:signup' %}">Вход/Регистрация</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="normal-nav reg">
+               <ul class="menu-1">
+                  <li>
+                     <a href="{% url 'static_pages:index' %}">Главная
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" title="Профориентационный тест">Профориентационный тест
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="{% url 'accounts:signup' %}">Вход/Регистрация
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </div>
+
+   <div class="advice-list">
+      <h2 class="advice-list__title">Поиск рекомендаций</h2>
+      <div class="advice-list__box">
+         <form action="{% url 'recommendations:index' %}">
+            <div class="advice-search">
+               <input type="search" placeholder="Найти рекомендаций" name="search">
+               <select>
+                  <option value="prof1">Показать все</option>
+                  <option value="prof1">Frontend разработчик</option>
+                  <option value="prof1">Backend разработчик</option>
+                  <option value="prof1">Машинное обучение</option>
+               </select>
+            </div>
+         </form>
+         <div class="advice-list__info">
+            {% for recommendation in recommendations %}
+            <div class="advice-info__box">
+               <a class="advice-list__link" href="{% url 'recommendations:detail' recommendation.id %}">
+                  <h3 class="advice-info__title">{{ recommendation.title }} - ({{ recommendation.profession.name }})</h3>
+                  <p class="advice-info__date">19/07/2018 - Дата создание</p>
+                  <p class="advice-info__desc">{{ recommendation.description }}</p>
+               </a>
+               <p class="advice-info__author"><a href="#">{{ recommendation.user.username }}</a></p>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+@import 'partials';
+
+.question {
+   h1 {
+      text-align: center;
+      color: $secondColor;
+      font-size: 1.9em;
+      padding: 20px 10px;
+   }
+}
+
+.answer-box {
+   @extend %justify-flex;
+
+   .test-answer-a,
+   .test-answer-b {
+      display: block;
+      width: 50%;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 1.7em;
+      color: #ffffff;
+      padding: 13% 0;
+      position: relative;
+
+      input[type=radio] {
+         opacity: 0;
+         outline: none;
+      }
+
+      input[type=radio]:checked + .overlay-answer__bg {
+         background: rgba(0, 0, 0, 0.2);
+         opacity: 1;
+      }
+   }
+
+   .overlay-answer__bg {
+      @extend %transition;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.1);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: 998;
+   }
+
+   .overlay-answer__text {
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      margin: 20% 35%;
+   }
+
+   .test-answer-a {
+      background-image: linear-gradient(135deg, #FEB692 10%, #EA5455 100%);
+
+      &:hover .overlay-answer__bg {
+         opacity: 1;
+      }
+   }
+
+   .test-answer-b {
+      background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
+
+      &:hover .overlay-answer__bg {
+         opacity: 1;
+      }
+   }
+}
+
+.question-data {
+   box-shadow: -3px 4px 49px -5px rgba(0,0,0,0.75);
+   z-index: 999;
+   text-align: center;
+   padding-top: 40px;
+
+   .next-question {
+      @extend %transition;
+      text-align: center;
+      background: none;
+      border: 2px solid $primaryColor;
+      color: $primaryColor;
+      border-radius: 5px;
+      padding: 7px 50px;
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 5px;
+
+      &:hover {
+         background: $primaryColor;
+         color: $headColor;
+      }
+
+      &:active {
+         background: #193f63;
+      }
+   }
+}

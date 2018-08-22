@@ -1,0 +1,46 @@
+{% extends 'static_pages/parent.html' %}
+{% block title %} recommendations {% endblock %}
+{% block content %}
+<div id="app">
+   {% include 'static_pages/partials/header_nav.html' %}
+
+   <div class="advice-list">
+      <h2 class="advice-list__title">Поиск рекомендаций</h2>
+      <div class="advice-list__box">
+         <form action="{% url 'recommendations:index' %}" method = 'POST'>
+            {% csrf_token %}
+            <div class="advice-search">
+               <input type="search" placeholder="Найти рекомендаций" name="search">
+                <select name = "rec_profession">
+                    <option value="None">Выберите профессию</option>
+                    {% for profession in professions %}
+                       <option value="{{ profession.id }}">{{ profession.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <hr>
+            <div class="advice-search">
+                {% if parameters %}
+                    <h3>The parameters</h3>
+                {% endif %}
+                {% for parameter in parameters %}
+                    <h4>(parameter) {{ parameter }}</h4>
+                {% endfor %}
+            </div>
+         </form>
+         <div class="advice-list__info">
+            {% for recommendation in recommendations %}
+               <div class="advice-info__box">
+                  <a class="advice-list__link" href="{% url 'recommendations:detail' recommendation.id %}">
+                     <h3 class="advice-info__title">{{ recommendation.title }} - ({{ recommendation.profession.name }})</h3>
+                     <p class="advice-info__date">19/07/2018 - Дата создание</p>
+                     <p class="advice-info__desc">{{ recommendation.description }}</p>
+                  </a>
+                  <p class="advice-info__author"><a href="#">{{ recommendation.user.username }}</a></p>
+               </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

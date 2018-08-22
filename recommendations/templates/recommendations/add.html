@@ -1,0 +1,39 @@
+{% extends 'static_pages/parent.html' %}
+{% load static %}
+{% block title %} Add {% endblock %}
+{% block content %}
+<div id="app">
+   {% include 'static_pages/partials/header_nav.html' %}
+
+   <div class="add-advice__form">
+      <div class="advice-wrap">
+         <h2 class="advice-head">Добавить рекомендацию</h2>
+         <form action="{% url 'recommendations:add' %}" method='POST'>
+            {% csrf_token %}
+            <div class="add-form">
+               <div class="flex">
+                  <p class="form-text">Заголовок рекомендаций</p>
+                  <p class="form-select">
+                     <select name="rec_profession">
+                        {% for profession in professions %}
+                        <option value="{{ profession.id }}">{{ profession.name }}</option>
+                        {% endfor %}
+                     </select>
+                  </p>
+               </div>
+
+               <input name='rec_title' class="input-text" type="text" placeholder="Заголовок">
+
+               <p class="form-text">Описание</p>
+               <textarea name='rec_description' placeholder="Описание" rows="10"></textarea>
+
+               <p class="next">
+                  <input type='submit' value='Далее' class="next-btn link-to-next"/>
+               </p>
+            </div>
+         </form>
+      </div>
+   </div>
+
+</div>
+{% endblock %}

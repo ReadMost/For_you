@@ -1,0 +1,196 @@
+@import 'partials';
+
+.flex {
+   @extend %justify-flex;
+   align-items: center;
+   margin-bottom: 5px;
+}
+
+.add-advice__form {
+   background: #F5F5F5;
+   padding: 50px 50px 80px;
+
+   .advice-wrap {
+      @extend %wrap;
+   }
+
+   .advice-head {
+      @extend %header-text;
+   }
+
+   .add-form {
+      width: 100%;
+      margin: 30px auto 0;
+   }
+
+   .form-text {
+      font-size: $mainSize + 6px;
+      color: $secondColor;
+      margin: 5px;
+   }
+
+   select {
+      padding: 4px;
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      outline: none;
+   }
+
+   .input-text,
+   textarea {
+      width: 100%;
+      padding: 10px 15px;
+      outline: none;
+      border-radius: 4px;
+      border: none;
+      box-sizing: border-box;
+      background: #d6eafa;
+   }
+
+   .steps-text {
+      font-size: $mainSize + 2px;
+      margin: 5px;
+   }
+
+   .sub-step {
+      margin-top: 10px;
+
+      .how-to-learn {
+         @extend %justify-flex;
+         margin-bottom: 10px;
+
+         i {
+            @extend %transition;
+            display: block;
+            color: #f74040;
+            font-size: 2em;
+            cursor: pointer;
+
+            &:hover {
+               color: #d61515;
+            }
+
+            &:active {
+               color: #a50d0d;
+            }
+         }
+
+         input[type=text] {
+            width: 100%;
+            margin-bottom: 5px;
+         }
+
+         .how-to-learn__add {
+            width: 100%;
+            margin-left: 20px;
+         }
+      }
+
+      .add-icon {
+         text-align: right;
+         margin-top: 10px;
+         margin-bottom: 10px;
+
+         i {
+            transition: all 0.7s;
+            color: $primaryColor;
+            font-size: 2.4em;
+            display: inline-block;
+            cursor: pointer;
+
+            &:hover {
+               transform: rotate(180deg);
+            }
+
+            &:active {
+               color: #193f63;
+            }
+         }
+      }
+
+      .back-btn {
+         @extend %transition;
+         background: $primaryColor;
+         color: $headColor;
+         border-radius: 4px;
+         padding: 6px 50px;
+         outline: none;
+         border: none;
+         cursor: pointer;
+
+         &:hover {
+            background: #286196;
+            color: $headColor;
+         }
+      }
+
+      .next-btn {
+         padding: 5px 20px !important;
+      }
+   }
+
+   .next {
+      text-align: right;
+      margin-top: 10px;
+
+      .next-btn {
+         @extend %transition;
+         background: none;
+         border: 2px solid $primaryColor;
+         color: $primaryColor;
+         border-radius: 4px;
+         padding: 5px 50px;
+         outline: none;
+         cursor: pointer;
+
+         &:hover {
+            background: $primaryColor;
+            color: $headColor;
+         }
+      }
+
+      .link-to-next {
+         font-size: $mainSize - 3px;
+      }
+   }
+}
+
+@media screen and (max-width: 1126px) {
+   .advice-wrap {
+      max-width: 100% !important;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   .add-advice__form {
+      select {
+         margin-bottom: 15px;
+      }
+
+      .add-form {
+         .flex {
+            display: block;
+         }
+      }
+
+      .next.flex {
+         display: block;
+      }
+
+      .next-btn {
+         border: 1px solid $primaryColor !important;
+      }
+
+      .step-btn {
+         display: block;
+         width: 100%;
+         margin-bottom: 10px;
+      }
+   }
+}
+
+@media screen and (max-width: 459px) {
+   .add-advice__form {
+      padding: 50px 15px;
+   }
+}

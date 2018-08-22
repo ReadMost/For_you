@@ -1,0 +1,109 @@
+{% extends 'static_pages/parent.html' %}
+{% load static %}
+{% block title %} Sign in {% endblock %}
+
+{% block content %}
+	<div id="app">
+		{% include 'static_pages/partials/header_nav.html' %}
+		<div class="profile-info">
+			<div class="profile-box">
+				<div class="profile-info__personal">
+					<h2 class="profile-info__title">Личная информация</h2>
+					<table class="personal-info">
+						<tr>
+							<th>Дата рождения:</th>
+							<td>12/02/2000</td>
+						</tr>
+						<tr>
+							<th>Телефон:</th>
+							<td>+7 775 798 9824</td>
+						</tr>
+						<tr>
+							<th>Страна:</th>
+							<td>Казахстан</td>
+						</tr>
+						<tr>
+							<th>Город:</th>
+							<td>Астана</td>
+						</tr>
+						<tr>
+							<th>Почта:</th>
+							<td>nurel32@gmail.com</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="profile-info__expertise">
+					<h2 class="profile-info__title">Проф. способности</h2>
+					<ul class="expertise-info">
+						<li v-for="skill in skills">[[ skill ]]</li>
+					</ul>
+				</div>
+
+				<div class="profile-info__about">
+					<h2 class="profile-info__title">Обо мне</h2>
+					<p class="profile-info__job">Frontend Developer</p>
+					<p class="profile-info__text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloribus minima quisquam similique! Aperiam autem doloribus
+						incidunt, ipsam ipsum libero minus natus quibusdam repudiandae veritatis. Incidunt ullam unde velit vero?
+					</p>
+				</div>
+			</div>
+
+			<div class="profile-recommendation">
+				<div class="recommendation-wrapper">
+					<h2 class="profile-info__title">Рекомендаций</h2>
+					<div class="recommendation-tab">
+						<div class="select-button">
+							<button class="tab-button" v-for="(tab, index) in tabs" :class="{active : currentTab === index }" @click="currentTab = index">
+								[[ tab ]]
+							</button>
+						</div>
+
+						<div class="recommendation-tab__wrap">
+							<div class="tab-item" v-show="currentTab === 0">
+								<div class="title-box">
+									<h2 class="profile-info__title">Мои рекомендаций</h2>
+									<a href="{% url 'recommendations:add' %}" class="add-advice">Добавить рекомендацию</a>
+								</div>
+								<div class="list-box">
+									{% for recommendation in my_recommendations %}
+										<div class="recommendation-list">
+											<a href="{% url 'recommendations:detail' recommendation.id %}">
+												<h3 class="list-title">{{ recommendation.title }}</h3>
+												<p class="list-date__create">{{ recommendation.created }} - Дата создание</p>
+												<p class="list-desc">
+														{{ recommendation.description }}
+												</p>
+												<p class="list-author">{{ recommendation.user.username }} - Автор</p>
+											</a>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+
+							<div class="tab-item" v-show="currentTab === 1">
+								<h2 class="profile-info__title">Сохраненные рекомендации</h2>
+
+								<div class="list-box">
+									{% for saver in saved_recommendations %}
+										<div class="recommendation-list">
+											<a href="{% url 'recommendations:detail' saver.recommendation.id %}">
+												<h3 class="list-title">{{ saver.recommendation.title }}</h3>
+												<p class="list-date__create">{{ saver.recommendation.created }} - Дата создание</p>
+												<p class="list-desc">
+														{{ saver.recommendation.description }}
+												</p>
+												<p class="list-author">{{ saver.recommendation.user.username }} - Автор</p>
+											</a>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

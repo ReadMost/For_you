@@ -1,0 +1,2204 @@
+@import url(../styles/icomoon.css);
+@import url(../styles/uikit.min.css);
+@import url(../styles/font-awesome.min.css);
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.reg .menu-1 {
+  margin-left: 0 !important; }
+
+.advice-list {
+  padding: 50px; }
+  .advice-list .advice-list__title {
+    color: #141414; }
+  .advice-list .advice-list__box {
+    width: 89.5%;
+    margin: 0 auto; }
+    .advice-list .advice-list__box .advice-search input[type=search],
+    .advice-list .advice-list__box .advice-search select {
+      display: block;
+      outline: none;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #777777; }
+    .advice-list .advice-list__box .advice-search input[type=search] {
+      width: 100%;
+      border-radius: 5px 0 0 0;
+      border-right: none; }
+    .advice-list .advice-list__box .advice-search select {
+      width: 20%;
+      border-radius: 0 5px 0 0; }
+    .advice-list .advice-list__box .advice-list__info .advice-list__link {
+      display: block;
+      margin-top: 30px;
+      color: #141414; }
+      .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__title {
+        font-size: 1.8em; }
+      .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__date {
+        font-size: 13px;
+        font-style: italic;
+        color: #777777; }
+      .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__desc {
+        color: #141414;
+        font-size: 17px;
+        margin: 5px 0; }
+    .advice-list .advice-list__box .advice-list__info .advice-info__author {
+      font-size: 21px;
+      text-align: right; }
+      .advice-list .advice-list__box .advice-list__info .advice-info__author a {
+        color: #3d93e3; }
+        .advice-list .advice-list__box .advice-list__info .advice-info__author a:hover {
+          text-decoration: underline; }
+
+@media screen and (max-width: 929px) {
+  .advice-list .advice-list__box {
+    width: 100% !important; }
+    .advice-list .advice-list__box .advice-search select {
+      width: 30%; } }
+@media screen and (max-width: 699px) {
+  .advice-list .advice-list__title {
+    font-size: 1.7em; }
+  .advice-list .advice-list__box .advice-search select {
+    width: 100%; }
+  .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__title {
+    font-size: 1.6em; }
+  .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__date {
+    font-size: 12px; }
+  .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__desc {
+    font-size: 16px; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__author {
+    font-size: 19px; } }
+@media screen and (max-width: 459px) {
+  .advice-list {
+    padding: 50px 15px; }
+    .advice-list .advice-list__title {
+      font-size: 1.6em; }
+    .advice-list .advice-list__box .advice-search select {
+      width: 0%; }
+    .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__title {
+      font-size: 1.5em; }
+    .advice-list .advice-list__box .advice-list__info .advice-list__link .advice-info__desc {
+      font-size: 15px; }
+    .advice-list .advice-list__box .advice-list__info .advice-info__author {
+      font-size: 17px; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.flex {
+  align-items: center;
+  margin-bottom: 5px; }
+
+.add-advice__form {
+  background: #F5F5F5;
+  padding: 50px 50px 80px; }
+  .add-advice__form .add-form {
+    width: 100%;
+    margin: 30px auto 0; }
+  .add-advice__form .form-text {
+    font-size: 22px;
+    color: #141414;
+    margin: 5px; }
+  .add-advice__form select {
+    padding: 4px;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    outline: none; }
+  .add-advice__form .input-text,
+  .add-advice__form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    background: #d6eafa; }
+  .add-advice__form .steps-text {
+    font-size: 18px;
+    margin: 5px; }
+  .add-advice__form .sub-step {
+    margin-top: 10px; }
+    .add-advice__form .sub-step .how-to-learn {
+      margin-bottom: 10px; }
+      .add-advice__form .sub-step .how-to-learn i {
+        display: block;
+        color: #f74040;
+        font-size: 2em;
+        cursor: pointer; }
+        .add-advice__form .sub-step .how-to-learn i:hover {
+          color: #d61515; }
+        .add-advice__form .sub-step .how-to-learn i:active {
+          color: #a50d0d; }
+      .add-advice__form .sub-step .how-to-learn input[type=text] {
+        width: 100%;
+        margin-bottom: 5px; }
+      .add-advice__form .sub-step .how-to-learn .how-to-learn__add {
+        width: 100%;
+        margin-left: 20px; }
+    .add-advice__form .sub-step .add-icon {
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .add-advice__form .sub-step .add-icon i {
+        transition: all 0.7s;
+        color: #3d93e3;
+        font-size: 2.4em;
+        display: inline-block;
+        cursor: pointer; }
+        .add-advice__form .sub-step .add-icon i:hover {
+          transform: rotate(180deg); }
+        .add-advice__form .sub-step .add-icon i:active {
+          color: #193f63; }
+    .add-advice__form .sub-step .back-btn {
+      background: #3d93e3;
+      color: #fff;
+      border-radius: 4px;
+      padding: 6px 50px;
+      outline: none;
+      border: none;
+      cursor: pointer; }
+      .add-advice__form .sub-step .back-btn:hover {
+        background: #286196;
+        color: #fff; }
+    .add-advice__form .sub-step .next-btn {
+      padding: 5px 20px !important; }
+  .add-advice__form .next {
+    text-align: right;
+    margin-top: 10px; }
+    .add-advice__form .next .next-btn {
+      background: none;
+      border: 2px solid #3d93e3;
+      color: #3d93e3;
+      border-radius: 4px;
+      padding: 5px 50px;
+      outline: none;
+      cursor: pointer; }
+      .add-advice__form .next .next-btn:hover {
+        background: #3d93e3;
+        color: #fff; }
+    .add-advice__form .next .link-to-next {
+      font-size: 13px; }
+
+@media screen and (max-width: 1126px) {
+  .advice-wrap {
+    max-width: 100% !important; } }
+@media screen and (max-width: 620px) {
+  .add-advice__form select {
+    margin-bottom: 15px; }
+  .add-advice__form .add-form .flex {
+    display: block; }
+  .add-advice__form .next.flex {
+    display: block; }
+  .add-advice__form .next-btn {
+    border: 1px solid #3d93e3 !important; }
+  .add-advice__form .step-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; } }
+@media screen and (max-width: 459px) {
+  .add-advice__form {
+    padding: 50px 15px; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.users {
+  padding: 50px; }
+  .users .users-list__title {
+    color: #141414; }
+  .users .users-list__box {
+    width: 89.5%;
+    margin: 0 auto; }
+    .users .users-list__box .users-search input[type=search],
+    .users .users-list__box .users-search select {
+      display: block;
+      outline: none;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #777777; }
+    .users .users-list__box .users-search input[type=search] {
+      width: 100%;
+      border-radius: 5px 0 0 0;
+      border-right: none; }
+    .users .users-list__box .users-search select {
+      width: 20%;
+      border-radius: 0 5px 0 0; }
+    .users .users-list__box .users-list__info {
+      flex-wrap: wrap; }
+      .users .users-list__box .users-list__info .users-info__box {
+        border: 1px solid #EAEAEA;
+        width: 23%;
+        text-align: center;
+        margin: 20px 0;
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: -1px 0px 35px -16px rgba(0, 0, 0, 0.75); }
+        .users .users-list__box .users-list__info .users-info__box .users-list__link {
+          display: block;
+          color: #141414; }
+          .users .users-list__box .users-list__info .users-info__box .users-list__link .users-ava {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            box-shadow: 0 0 1px #777777;
+            margin: 0 auto 10px; }
+            .users .users-list__box .users-list__info .users-info__box .users-list__link .users-ava img {
+              width: 100%;
+              height: 100%; }
+          .users .users-list__box .users-list__info .users-info__box .users-list__link .users-name {
+            font-size: 1.5em;
+            border-top: 1px solid #EAEAEA; }
+          .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars {
+            font-size: 0;
+            margin-top: 5px; }
+            .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button {
+              background-color: #eff3f6;
+              border: 1px solid #A5A8AC;
+              color: #141414;
+              padding: 6px 0;
+              width: 60%;
+              display: inline-block;
+              cursor: pointer;
+              border-radius: 3px 0 0 3px;
+              outline: none;
+              font-size: 13px; }
+              .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button:active {
+                box-shadow: inset 0px 0px 46px -13px rgba(0, 0, 0, 0.75); }
+              .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button i {
+                margin-right: 5px; }
+            .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars span {
+              display: inline-block;
+              border: 1px solid #CCCED0;
+              padding: 4px 0;
+              width: 20%;
+              background: #fff;
+              color: #141414;
+              font-size: 13px;
+              border-radius: 0 3px 3px 0;
+              cursor: pointer;
+              border-left: none; }
+              .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars span:hover {
+                color: #3d93e3; }
+
+@media screen and (max-width: 1203px) {
+  .users .users-list__box .users-list__info .users-info__box {
+    width: 30%; } }
+@media screen and (max-width: 950px) {
+  .users .users-list__box {
+    width: 100%; }
+    .users .users-list__box .users-search select {
+      width: 30%; }
+    .users .users-list__box .users-list__info .users-info__box {
+      width: 30%; } }
+@media screen and (max-width: 809px) {
+  .users .users-list__box .users-search select {
+    width: 100%; }
+  .users .users-list__box .users-list__info .users-info__box {
+    width: 49%; } }
+@media screen and (max-width: 537px) {
+  .users .users-list__title {
+    font-size: 1.7em; }
+  .users .users-list__box .users-search select {
+    width: 0%; }
+  .users .users-list__box .users-list__info .users-info__box {
+    width: 100%; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.edit-profile-box {
+  padding: 30px 15px !important;
+  width: 400px;
+  margin: 0 auto; }
+  .edit-profile-box h1 {
+    font-size: 1.8em;
+    color: #141414; }
+  .edit-profile-box h2 {
+    font-size: 1.7em;
+    color: #141414;
+    margin-bottom: 10px; }
+  .edit-profile-box .edit-personal table {
+    border-spacing: 5px;
+    font-size: 17px;
+    color: #141414; }
+    .edit-profile-box .edit-personal table tr td {
+      padding-bottom: 5px; }
+      .edit-profile-box .edit-personal table tr td .edit-personal-input {
+        width: 100%;
+        outline: none;
+        padding: 4px;
+        border: none;
+        border-bottom: 1px solid #777777; }
+      .edit-profile-box .edit-personal table tr td input[type=date] {
+        padding: 3px; }
+      .edit-profile-box .edit-personal table tr td:first-child {
+        padding-right: 40px; }
+  .edit-profile-box .edit-expertise .add-skill-input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #141414;
+    outline: none; }
+  .edit-profile-box .edit-expertise p {
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px 10px 10px 0;
+    padding: 6px 35px;
+    display: inline-block;
+    background: #3d93e3;
+    border-radius: 3px; }
+    .edit-profile-box .edit-expertise p:hover {
+      background: #286196; }
+    .edit-profile-box .edit-expertise p:active {
+      background: #193f63; }
+  .edit-profile-box .edit-expertise .expertise-info li {
+    display: inline-block;
+    background: #EFF1F2;
+    padding: 7px;
+    margin: 3px;
+    color: #666666; }
+    .edit-profile-box .edit-expertise .expertise-info li:after {
+      content: ',';
+      font-size: 20px;
+      display: inline; }
+    .edit-profile-box .edit-expertise .expertise-info li:first-child {
+      margin-left: 0; }
+    .edit-profile-box .edit-expertise .expertise-info li:last-child:after {
+      content: ''; }
+  .edit-profile-box .edit-about .edit-about-box p {
+    font-size: 17px;
+    color: #141414;
+    display: inline-block; }
+  .edit-profile-box .edit-about .edit-about-box select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 10px 0; }
+  .edit-profile-box .edit-about .edit-about-box textarea {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none; }
+  .edit-profile-box .edit-save {
+    text-align: center; }
+    .edit-profile-box .edit-save button {
+      background: none;
+      padding: 6px 38px;
+      color: #3d93e3;
+      border: 2px solid #3d93e3;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: none; }
+      .edit-profile-box .edit-save button:hover {
+        background: #3d93e3;
+        color: #fff; }
+      .edit-profile-box .edit-save button:active {
+        background: #286196;
+        border-color: #286196; }
+
+body {
+  font-size: 15px !important; }
+
+#app {
+  overflow: hidden; }
+
+.profile .profile-head {
+  position: relative; }
+  .profile .profile-head .nickname {
+    background: url(../img/1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    height: 280px; }
+    .profile .profile-head .nickname .overlay {
+      background: rgba(35, 35, 35, 0.6);
+      width: 100%;
+      height: 280px;
+      z-index: 0;
+      padding: 3% 10%;
+      box-sizing: border-box; }
+      .profile .profile-head .nickname .overlay h1 {
+        color: #fff;
+        font-size: 2.7em;
+        margin-bottom: 10px; }
+      .profile .profile-head .nickname .overlay .star {
+        margin-bottom: 20px;
+        font-size: 0; }
+        .profile .profile-head .nickname .overlay .star button {
+          background: none;
+          color: #fff;
+          border: 1px solid #CCCED0;
+          padding: 6px 15px;
+          display: inline-block;
+          cursor: pointer;
+          border-radius: 3px 0 0 3px;
+          outline: none;
+          font-size: 13px; }
+          .profile .profile-head .nickname .overlay .star button:hover {
+            background-color: #eff3f6;
+            border: 1px solid #A5A8AC;
+            color: #141414; }
+          .profile .profile-head .nickname .overlay .star button:active {
+            box-shadow: inset 0px 0px 46px -13px rgba(0, 0, 0, 0.75); }
+          .profile .profile-head .nickname .overlay .star button i {
+            margin-right: 5px; }
+        .profile .profile-head .nickname .overlay .star span {
+          display: inline-block;
+          border: 1px solid #CCCED0;
+          padding: 4px 10px;
+          background: #fff;
+          color: #141414;
+          font-size: 13px;
+          border-radius: 0 3px 3px 0;
+          cursor: pointer;
+          border-left: none; }
+          .profile .profile-head .nickname .overlay .star span:hover {
+            color: #3d93e3; }
+      .profile .profile-head .nickname .overlay .edit-profile {
+        text-align: right;
+        margin-top: 2%; }
+        .profile .profile-head .nickname .overlay .edit-profile a {
+          text-align: center;
+          color: #fff;
+          border: 2px solid #fff;
+          padding: 6px 20px;
+          border-radius: 5px;
+          font-size: 14px;
+          display: inline-block; }
+          .profile .profile-head .nickname .overlay .edit-profile a:hover {
+            background: #fff;
+            color: #3d93e3; }
+.profile nav {
+  background: #ffffff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1); }
+  .profile nav .responsive-nav {
+    display: none; }
+  .profile nav .normal-nav {
+    align-items: center; }
+  .profile nav .normal-nav ul li {
+    display: inline-block;
+    border-right: 1px solid #EAEAEA; }
+    .profile nav .normal-nav ul li:first-child {
+      border-left: 1px solid #EAEAEA; }
+    .profile nav .normal-nav ul li a {
+      color: #141414;
+      display: inline-block;
+      font-weight: 700;
+      margin-left: -4px !important;
+      font-size: 14px;
+      padding: 20px; }
+      .profile nav .normal-nav ul li a:hover {
+        background: #F0F0F0; }
+    .profile nav .normal-nav ul li i {
+      display: inline-block;
+      margin-left: 5px;
+      color: #3d93e3; }
+  .profile nav .normal-nav .menu-1 {
+    margin-left: 21%; }
+  .profile nav .normal-nav .menu-2 {
+    margin-right: 20%; }
+  .profile nav .normal-nav .sub-list {
+    position: relative; }
+    .profile nav .normal-nav .sub-list:hover .submenu {
+      opacity: 1;
+      top: 60px; }
+    .profile nav .normal-nav .sub-list .submenu {
+      transition: opacity 0.4s;
+      position: absolute;
+      background: #fff;
+      top: -999px;
+      left: -3px;
+      opacity: 0; }
+      .profile nav .normal-nav .sub-list .submenu li {
+        display: block;
+        border-left: none;
+        width: 220px;
+        border-bottom: 1px solid #EAEAEA; }
+        .profile nav .normal-nav .sub-list .submenu li a {
+          display: block; }
+  .profile nav .normal-nav .ava {
+    position: relative; }
+    .profile nav .normal-nav .ava .ava-photo {
+      position: absolute;
+      top: -80px;
+      left: -84px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 10px solid #fff;
+      box-shadow: 0 0 1px #777777;
+      width: 145px;
+      height: 145px;
+      z-index: 999; }
+      .profile nav .normal-nav .ava .ava-photo img {
+        width: 100%;
+        height: 100%; }
+
+.profile-info .profile-box {
+  margin-bottom: 80px; }
+.profile-info .profile-info__about,
+.profile-info .profile-info__personal,
+.profile-info .profile-info__expertise {
+  width: 33.33%;
+  padding: 50px;
+  box-sizing: border-box; }
+.profile-info .profile-info__about,
+.profile-info .profile-info__personal {
+  background: #F5F5F5; }
+.profile-info .profile-info__expertise {
+  background: #F0F0F0; }
+.profile-info .profile-info__title {
+  font-size: 2em;
+  color: #141414 !important; }
+.profile-info .profile-info__job {
+  font-size: 1.6em;
+  margin-bottom: 20px; }
+.profile-info .profile-info__text {
+  color: #777777;
+  line-height: 1.5em; }
+.profile-info .personal-info {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%; }
+  .profile-info .personal-info tr {
+    border-bottom: 1px solid #E6E6E6; }
+    .profile-info .personal-info tr th {
+      color: #141414; }
+    .profile-info .personal-info tr td {
+      padding: 10px; }
+.profile-info .expertise-info li {
+  display: inline-block;
+  background: #F5F5F5;
+  padding: 7px;
+  margin: 3px; }
+  .profile-info .expertise-info li:after {
+    content: ',';
+    font-size: 20px;
+    display: inline; }
+  .profile-info .expertise-info li:last-child:after {
+    content: '';
+    display: inline-block; }
+.profile-info .profile-recommendation {
+  padding-bottom: 80px; }
+  .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab {
+    margin-top: 50px; }
+    .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .active {
+      height: 45px !important; }
+    .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .select-button {
+      height: 45px; }
+    .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .select-button {
+      display: flex;
+      align-items: flex-end; }
+    .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button {
+      border: 1px solid #EAEAEA;
+      border-bottom: none;
+      padding: 0 30px;
+      height: 39px;
+      outline: none;
+      display: inline-block;
+      vertical-align: bottom;
+      cursor: pointer;
+      font-size: 15px;
+      background: #fff;
+      margin-top: 2px; }
+      .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button:last-child {
+        margin-left: -1px; }
+      .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button:hover {
+        background: #3d93e3;
+        color: #fff; }
+    .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item {
+      border: 1px solid #EAEAEA;
+      padding: 50px; }
+      .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box {
+        align-items: center; }
+        .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice {
+          display: inline-block;
+          background: none;
+          border: 3px solid #3d93e3;
+          color: #3d93e3;
+          border-radius: 20px;
+          padding: 5px 25px;
+          cursor: pointer;
+          outline: none; }
+          .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice:hover {
+            background: #3d93e3;
+            color: #fff; }
+      .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box {
+        justify-content: flex-start !important;
+        flex-wrap: wrap; }
+      .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list {
+        padding-top: 20px;
+        width: 30%; }
+        .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after {
+          left: -9px !important;
+          top: 33px !important; }
+        .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a {
+          color: #777777;
+          display: block;
+          padding: 5px; }
+          .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a:hover {
+            color: #141414;
+            box-shadow: inset 0px 0px 36px -2px #e8e8e8; }
+          .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a .list-title {
+            color: #141414 !important; }
+          .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a .list-date__create {
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 3px;
+            margin-bottom: 10px; }
+          .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a .list-author {
+            margin-top: 10px;
+            color: #141414;
+            font-weight: 700;
+            font-size: 16px; }
+
+@media screen and (max-width: 1920px) {
+  .profile .profile-head .nickname .overlay .edit-profile {
+    margin-top: 5%; } }
+@media screen and (max-width: 1450px) {
+  .profile .profile-head .nickname .overlay .edit-profile {
+    margin-top: 8%; } }
+@media screen and (max-width: 1366px) {
+  .profile .profile-head .nickname .overlay {
+    padding: 5% 10%; }
+    .profile .profile-head .nickname .overlay .edit-profile {
+      margin-top: 7%; } }
+@media screen and (max-width: 1126px) {
+  nav .menu-1 {
+    margin-left: 10% !important; }
+  nav .menu-2 {
+    margin-right: 10% !important; }
+
+  .recommendation-list {
+    width: 46% !important; }
+
+  .profile-info__title {
+    font-size: 1.7em !important; }
+
+  .edit-profile {
+    margin-top: 8% !important; } }
+@media screen and (max-width: 977px) {
+  .recommendation-list {
+    width: 100% !important; }
+
+  .profile-box {
+    display: block !important;
+    margin-bottom: 80px; }
+
+  .profile-info__about,
+  .profile-info__personal,
+  .profile-info__expertise {
+    width: 100% !important; }
+
+  .profile-info__title {
+    font-size: 2em !important; }
+
+  .edit-profile {
+    margin-top: 10% !important; } }
+@media screen and (max-width: 886px) {
+  .profile .profile-head .nickname .overlay .flex {
+    display: block; }
+    .profile .profile-head .nickname .overlay .flex .star {
+      margin-top: 10px; }
+
+  .responsive-nav {
+    display: block !important; }
+
+  .normal-nav {
+    display: none !important; }
+
+  .responsive-burger__menu {
+    position: relative;
+    padding: 30px 0; }
+    .responsive-burger__menu .burger {
+      font-size: 10px;
+      cursor: pointer;
+      display: block;
+      text-align: right;
+      position: absolute;
+      z-index: 999 !important;
+      padding-right: 40px;
+      top: 22px;
+      left: 0;
+      right: 0; }
+      .responsive-burger__menu .burger span {
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background: #141414;
+        position: relative;
+        border-radius: 3px; }
+        .responsive-burger__menu .burger span::after, .responsive-burger__menu .burger span::before {
+          content: '';
+          display: inline-block;
+          width: 30px;
+          height: 3px;
+          background: #141414;
+          position: absolute;
+          border-radius: 3px;
+          left: 0; }
+        .responsive-burger__menu .burger span::after {
+          top: 6px; }
+        .responsive-burger__menu .burger span::before {
+          bottom: 6px; }
+    .responsive-burger__menu .responsive-dropdown {
+      position: absolute;
+      top: -10% !important;
+      z-index: 1 !important; }
+      .responsive-burger__menu .responsive-dropdown .responsive-menu {
+        padding: 0;
+        margin: 0; }
+        .responsive-burger__menu .responsive-dropdown .responsive-menu li a {
+          transition: all 0.2s;
+          color: #141414 !important;
+          display: block;
+          box-sizing: border-box;
+          padding: 10px 10px 10px 0;
+          font-weight: 700;
+          border-bottom: 1px solid #E6E6E6; }
+          .responsive-burger__menu .responsive-dropdown .responsive-menu li a:hover {
+            text-decoration: underline; }
+
+  .title-box {
+    display: block !important; }
+    .title-box .add-advice {
+      text-align: center !important;
+      margin-bottom: 20px !important; } }
+@media screen and (max-width: 546px) {
+  .nickname {
+    height: auto !important; }
+    .nickname .overlay {
+      height: auto !important; } }
+@media screen and (max-width: 459px) {
+  h1 {
+    font-size: 2.3em !important; }
+
+  .edit-profile a {
+    padding: 4px 0 !important;
+    width: 100% !important; }
+
+  .profile-info .profile-info__title {
+    font-size: 1.8em !important; }
+  .profile-info .profile-info__job {
+    font-size: 1.5em !important; }
+  .profile-info .profile-info__about,
+  .profile-info .profile-info__personal,
+  .profile-info .profile-info__expertise {
+    padding: 50px 15px !important; }
+  .profile-info .personal-info,
+  .profile-info .expertise-info,
+  .profile-info .profile-info__text {
+    font-size: 14px;
+    line-height: 1.8em !important; }
+  .profile-info .expertise-info li {
+    padding: 2px 8px !important; }
+
+  .recommendation-wrapper {
+    max-width: 100% !important; }
+    .recommendation-wrapper .profile-info__title {
+      margin-left: 15px; }
+    .recommendation-wrapper .tab-button {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      box-sizing: border-box; }
+      .recommendation-wrapper .tab-button:last-child {
+        margin-left: 0 !important; }
+    .recommendation-wrapper .active {
+      height: 45px !important; }
+    .recommendation-wrapper .tab-item {
+      padding: 20px !important; }
+      .recommendation-wrapper .tab-item .list-title {
+        font-size: 1.5em; }
+      .recommendation-wrapper .tab-item .list-desc {
+        font-size: 14px; }
+      .recommendation-wrapper .tab-item .profile-info__title {
+        margin-left: 0;
+        font-size: 1.6em !important; }
+      .recommendation-wrapper .tab-item .add-advice {
+        width: 80%; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+header {
+  background-image: url(../img/banner.png);
+  padding: 30px 0 0;
+  background-size: cover;
+  color: #fff; }
+  header .adaptive-sign {
+    display: none; }
+  header .search-worker {
+    position: relative;
+    margin-bottom: 25px; }
+    header .search-worker input[type=search] {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      outline: none;
+      border-radius: 3px;
+      background: #fff;
+      border: 2px solid #fff;
+      color: #141414;
+      font-size: 14px; }
+    header .search-worker input[type=submit] {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      outline: none;
+      border: none;
+      color: #fff;
+      padding: 0 20px;
+      cursor: pointer;
+      margin: 2px;
+      border-left: 2px solid #fff;
+      background: #3d93e3;
+      border-radius: 3px;
+      font-size: 15px; }
+      header .search-worker input[type=submit]:hover {
+        background: #286196; }
+      header .search-worker input[type=submit]:active {
+        background: #193f63; }
+  header .logo-box {
+    align-items: center; }
+    header .logo-box .logo-title {
+      font-size: 30px;
+      font-weight: 700; }
+      header .logo-box .logo-title i {
+        font-size: 1.7em;
+        vertical-align: middle;
+        margin-bottom: 5px; }
+    header .logo-box .sign-list li {
+      display: inline-block; }
+      header .logo-box .sign-list li a {
+        color: #fff; }
+      header .logo-box .sign-list li:first-child a:hover {
+        color: #3d93e3; }
+      header .logo-box .sign-list li:last-child a {
+        margin-left: 20px; }
+  header .title-box {
+    width: 550px; }
+  header .title {
+    margin-top: 80px; }
+    header .title h1 {
+      margin-bottom: 20px !important;
+      font-weight: 400; }
+      header .title h1 a {
+        color: #3d93e3; }
+        header .title h1 a:hover {
+          border-bottom: 2px solid #3d93e3; }
+    header .title .advice {
+      font-size: 19px; }
+      header .title .advice li {
+        margin-bottom: 10px; }
+        header .title .advice li a {
+          color: #fff;
+          font-weight: 700;
+          text-decoration: underline; }
+          header .title .advice li a:hover {
+            color: #777777; }
+        header .title .advice li:before {
+          content: '';
+          display: inline-block;
+          vertical-align: top;
+          background: url(../img/angle-right.png);
+          -webkit-background-size: contain;
+          background-size: contain;
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+          margin-top: 2px; }
+  header .try {
+    margin-top: 80px; }
+  header .title-paren {
+    align-items: flex-start; }
+  header .for-phone {
+    width: 20%;
+    display: inline-block;
+    position: relative;
+    margin-top: 30px; }
+    header .for-phone:hover .overlay {
+      opacity: 1; }
+    header .for-phone .overlay-image {
+      position: absolute;
+      width: 98%;
+      top: 22px;
+      left: 5px;
+      border-radius: 50px 50px 0 0;
+      height: 71%;
+      cursor: pointer; }
+    header .for-phone .phone-img {
+      width: 100%;
+      position: relative; }
+    header .for-phone .overlay {
+      opacity: 0;
+      position: absolute;
+      top: 3%;
+      left: 6%;
+      right: 6%;
+      bottom: 3%;
+      border-radius: 7% 7% 9% 9%;
+      background: rgba(0, 0, 0, 0.9); }
+      header .for-phone .overlay a {
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin: 65% auto;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        padding: 10px 0;
+        width: 80%; }
+        header .for-phone .overlay a:hover {
+          background: #fff;
+          color: #3d93e3; }
+  header .scroll-down {
+    text-align: center;
+    padding: 80px 0 50px; }
+    header .scroll-down a {
+      color: #fff;
+      display: inline-block;
+      border: 1px solid #fff;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      padding: 10px; }
+      header .scroll-down a:hover {
+        background: #fff;
+        color: #3d93e3; }
+
+@media screen and (max-width: 600px) {
+  header .wrapper,
+  main .wrapper {
+    padding: 0 30px; }
+
+  header .title-box {
+    width: 100%; }
+  header .title {
+    text-align: center; }
+    header .title h1 {
+      font-size: 2.1em; }
+    header .title .advice li {
+      font-size: 16px; }
+      header .title .advice li::before {
+        content: none; }
+  header .try {
+    text-align: center;
+    margin-top: 30px; } }
+@media screen and (max-width: 518px) {
+  header .scroll-down {
+    padding: 90px 0 50px; }
+  header .adaptive-sign {
+    display: block;
+    margin-bottom: 20px; }
+    header .adaptive-sign .adaptive-sign__list {
+      text-align: center; }
+      header .adaptive-sign .adaptive-sign__list li a {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        color: #fff;
+        display: block; }
+      header .adaptive-sign .adaptive-sign__list li:first-child {
+        margin-bottom: 10px; }
+        header .adaptive-sign .adaptive-sign__list li:first-child a:hover {
+          color: #3d93e3; }
+      header .adaptive-sign .adaptive-sign__list li:last-child a {
+        border: 2px solid #fff;
+        border-radius: 3px;
+        padding: 4px 30px; }
+        header .adaptive-sign .adaptive-sign__list li:last-child a:hover {
+          background: #fff;
+          color: #3d93e3; }
+  header .logo-box {
+    display: block !important; }
+    header .logo-box .logo-title {
+      text-align: center;
+      font-size: 40px; }
+      header .logo-box .logo-title i {
+        font-size: 1.7em; }
+    header .logo-box .sign {
+      display: none; }
+  header .title {
+    margin-top: 20px; } }
+@media screen and (max-width: 460px) {
+  header .title-box {
+    width: 100%; }
+  header .title {
+    text-align: center; }
+    header .title h1 {
+      font-size: 2em !important;
+      margin-bottom: 50px !important; }
+    header .title .advice li {
+      font-size: 16px; }
+      header .title .advice li::before {
+        content: none; }
+  header .try {
+    text-align: center;
+    margin-top: 60px; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.advice-box {
+  background: #F5F5F5;
+  padding: 50px; }
+  .advice-box .advice-box__title {
+    font-size: 2em;
+    color: #141414 !important; }
+  .advice-box .advice-info {
+    max-width: 80%;
+    margin: 0 auto; }
+    .advice-box .advice-info .flex {
+      align-items: flex-start;
+      margin-bottom: 10px;
+      margin-top: 3px; }
+      .advice-box .advice-info .flex .advice-author {
+        font-size: 14px; }
+        .advice-box .advice-info .flex .advice-author a {
+          font-style: italic; }
+          .advice-box .advice-info .flex .advice-author a:hover {
+            text-decoration: underline;
+            color: #3d93e3; }
+    .advice-box .advice-info .advice-title {
+      color: #141414 !important;
+      font-size: 2em; }
+    .advice-box .advice-info .advice-date {
+      font-size: 14px;
+      font-style: italic; }
+    .advice-box .advice-info .advice-desc {
+      color: #141414;
+      font-size: 18px; }
+    .advice-box .advice-info .advice-like i,
+    .advice-box .advice-info .advice-save i {
+      display: inline-block;
+      text-align: center;
+      width: 20px; }
+    .advice-box .advice-info .advice-step__box {
+      margin: 50px 0; }
+      .advice-box .advice-info .advice-step__box h4 {
+        margin: 20px 0;
+        color: #141414 !important;
+        font-size: 1.5em; }
+      .advice-box .advice-info .advice-step__box .advice-step {
+        font-size: 18px;
+        color: #141414; }
+        .advice-box .advice-info .advice-step__box .advice-step li {
+          padding-top: 20px;
+          border-left: 1px solid #666666 !important; }
+          .advice-box .advice-info .advice-step__box .advice-step li:first-child {
+            padding-top: 0px; }
+          .advice-box .advice-info .advice-step__box .advice-step li:first-child::after {
+            top: 5px !important; }
+          .advice-box .advice-info .advice-step__box .advice-step li::after {
+            border: 3px solid #F5F5F5 !important;
+            left: -8px !important;
+            top: 25px !important; }
+
+.comments {
+  margin-top: 100px; }
+  .comments form {
+    margin-bottom: 30px; }
+    .comments form input {
+      width: 100%;
+      outline: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 7px 0;
+      border: none;
+      border-bottom: 1px solid #777777;
+      background: none; }
+  .comments .comment-list {
+    align-items: flex-start;
+    margin-bottom: 20px;
+    color: #141414; }
+    .comments .comment-list .comment-author-ava {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden; }
+      .comments .comment-list .comment-author-ava img {
+        width: 100%;
+        height: 100%; }
+    .comments .comment-list .comment-text-box {
+      width: 95%; }
+      .comments .comment-list .comment-text-box .comment-author {
+        font-weight: 700; }
+
+@media screen and (max-width: 977px) {
+  .advice-info {
+    max-width: 100% !important; } }
+@media screen and (max-width: 546px) {
+  .advice-box {
+    padding: 50px 20px; }
+    .advice-box .advice-box__title {
+      font-size: 1.8em; }
+    .advice-box .advice-info .advice-title {
+      font-size: 1.8em; }
+    .advice-box .advice-info .advice-desc {
+      font-size: 16px !important; }
+    .advice-box .advice-info .flex {
+      display: block; }
+    .advice-box .advice-info .advice-step__box h4 {
+      font-size: 1.4em; }
+    .advice-box .advice-info .advice-step__box .advice-step {
+      font-size: 16px; }
+      .advice-box .advice-info .advice-step__box .advice-step li::after {
+        content: '';
+        height: 8px;
+        width: 8px;
+        left: -7px;
+        top: 25px; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.join-btn__box {
+  text-align: center; }
+
+.join-modal__btn {
+  border: 1px solid #3d93e3;
+  color: #3d93e3;
+  display: inline-block;
+  margin: 0 auto 10px;
+  padding: 5px 0;
+  width: 48%;
+  border-radius: 5px;
+  text-align: center; }
+  .join-modal__btn:hover {
+    background: #3d93e3;
+    color: #fff; }
+
+.join-modal {
+  width: 400px;
+  border-radius: 5px; }
+
+.join-logo {
+  text-align: center;
+  font-size: 4em; }
+
+.instruction-box__img2 {
+  display: none; }
+
+.join {
+  text-align: center;
+  padding: 80px 0 100px; }
+  .join .join-title {
+    color: #141414; }
+    .join .join-title h2 {
+      font-size: 1.9em; }
+      .join .join-title h2::before {
+        margin: 0 auto 10px; }
+  .join .join-list {
+    margin: 50px 70px; }
+    .join .join-list .join-list__item {
+      width: 30%; }
+      .join .join-list .join-list__item .join-list__img {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 30px; }
+        .join .join-list .join-list__item .join-list__img img {
+          width: 100%; }
+      .join .join-list .join-list__item p {
+        color: #141414;
+        font-size: 17px; }
+  .join .join-btn .join-btn__try {
+    background: #3d93e3;
+    border-radius: 4px !important; }
+    .join .join-btn .join-btn__try:hover {
+      background: #286196; }
+    .join .join-btn .join-btn__try:active {
+      background: #193f63; }
+
+.info {
+  background: #F0F0F0;
+  padding: 80px 0 100px; }
+  .info .info-title {
+    text-align: center;
+    color: #3d93e3;
+    max-width: 670px;
+    margin: 0 auto;
+    font-size: 20px; }
+    .info .info-title h2 {
+      font-weight: 700; }
+      .info .info-title h2::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #141414;
+        margin: 20px auto; }
+  .info .info-btn {
+    text-align: center;
+    margin-top: 50px; }
+    .info .info-btn .info-btn__try {
+      background: #3d93e3;
+      border-radius: 3px !important;
+      border: none !important; }
+      .info .info-btn .info-btn__try:hover {
+        background: #286196; }
+      .info .info-btn .info-btn__try:active {
+        background: #193f63; }
+
+.instruction {
+  background: #2d599e;
+  background: linear-gradient(to right, #2d599e 0%, #3d93e3 100%);
+  color: #fff;
+  padding: 80px 0 100px; }
+  .instruction .instruction-title {
+    max-width: 1020px;
+    margin: 0 auto; }
+    .instruction .instruction-title .instruction-box {
+      margin-top: 20px;
+      counter-reset: item; }
+      .instruction .instruction-title .instruction-box h3 {
+        font-size: 1.9em; }
+        .instruction .instruction-title .instruction-box h3::after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 2px;
+          background: #fff;
+          margin: 20px 0; }
+      .instruction .instruction-title .instruction-box .instruction-box__item {
+        margin-bottom: 80px;
+        text-align: justify;
+        position: relative; }
+        .instruction .instruction-title .instruction-box .instruction-box__item::before {
+          content: "0" counter(item) "";
+          counter-increment: item;
+          display: block;
+          position: absolute;
+          color: #ffffff;
+          font-size: 135px;
+          top: 0;
+          opacity: 0.1; }
+      .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) {
+        display: flex; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) .instruction-box__img {
+          width: 47%; }
+          .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) .instruction-box__img img {
+            box-shadow: -2px 1px 15px -1px rgba(0, 0, 0, 0.3); }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) .instruction-box__content {
+          width: 45%; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd)::before {
+          left: -15%; }
+      .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) {
+        position: relative;
+        margin-left: auto; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__img {
+          width: 47%; }
+          .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__img img {
+            width: 100%; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__content {
+          width: 45%; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even)::before {
+          right: -15%; }
+  .instruction .instruction-btn {
+    text-align: center;
+    margin-top: 50px; }
+    .instruction .instruction-btn .instruction-btn__try {
+      background: none; }
+      .instruction .instruction-btn .instruction-btn__try:hover {
+        background: #fff;
+        color: #3d93e3; }
+
+@media screen and (max-width: 1326px) {
+  .instruction .instruction-title {
+    max-width: 1020px; }
+    .instruction .instruction-title .instruction-box {
+      margin-top: 20px;
+      counter-reset: item; }
+      .instruction .instruction-title .instruction-box .instruction-box__item {
+        margin-bottom: 80px;
+        text-align: justify;
+        position: relative; }
+        .instruction .instruction-title .instruction-box .instruction-box__item::before {
+          content: none !important; }
+      .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) {
+        display: block !important; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) .instruction-box__content {
+          width: 100%; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd) .instruction-box__img {
+          width: 70%;
+          margin: 40px auto 0; }
+      .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) {
+        display: block !important; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__content {
+          width: 100%; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__img {
+          display: none; }
+        .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even) .instruction-box__img2 {
+          display: block;
+          width: 70%;
+          margin: 40px auto 0; } }
+@media screen and (max-width: 992px) {
+  .join .join-list {
+    margin: 50px 0; } }
+@media screen and (max-width: 598px) {
+  .join .join-list {
+    display: block !important;
+    text-align: center; }
+    .join .join-list .join-list__item {
+      width: 80%;
+      margin: 0 auto 60px; }
+      .join .join-list .join-list__item .join-list__img {
+        margin: 0 auto 20px; }
+      .join .join-list .join-list__item p {
+        color: #141414;
+        font-size: 17px; } }
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.sign-wrapper {
+  max-width: 380px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center; }
+  .sign-wrapper .sign {
+    margin-top: 55px; }
+    .sign-wrapper .sign .logo span {
+      font-size: 70px; }
+    .sign-wrapper .sign .logo p {
+      font-size: 1.5em;
+      margin-bottom: 38px; }
+    .sign-wrapper .sign .sign-up input {
+      width: 100%;
+      display: block;
+      margin-bottom: 15px;
+      padding: 13px 13px;
+      border-radius: 3px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #d6eafa;
+      color: #000;
+      border: none;
+      border-radius: 3px;
+      display: block;
+      line-height: 1.4em;
+      outline: none; }
+    .sign-wrapper .sign .sign-up button {
+      cursor: pointer;
+      background-color: #3d93e3;
+      color: #fff;
+      border: none;
+      width: auto;
+      padding: 10px 47px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      margin-top: 20px;
+      font-size: 14px; }
+      .sign-wrapper .sign .sign-up button:hover {
+        background: #286196; }
+      .sign-wrapper .sign .sign-up button:active {
+        background: #193f63; }
+    .sign-wrapper .sign .sign-up .error {
+      color: #ff4f4f; }
+    .sign-wrapper .sign .sign-up p {
+      margin-top: 15px; }
+      .sign-wrapper .sign .sign-up p a {
+        color: #3d93e3; }
+        .sign-wrapper .sign .sign-up p a:hover {
+          color: #193f63; }
+
+a {
+  text-decoration: none; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, header .logo-box .sign-list, header .title h1, header .title .advice, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.advice-list .advice-list__box .advice-search, .flex, .add-advice__form .sub-step .how-to-learn, .users .users-list__box .users-search, .users .users-list__box .users-list__info, .profile nav .normal-nav, .profile-info .profile-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .list-box, header .logo-box, header .title-paren, .comments .comment-list, .join .join-list, .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(odd), .instruction .instruction-title .instruction-box .instruction-box__item:nth-child(even), .answer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.add-advice__form .sub-step .how-to-learn i, .add-advice__form .sub-step .back-btn, .add-advice__form .next .next-btn, .users .users-list__box .users-list__info .users-info__box .users-list__link .users-stars button, .edit-profile-box .edit-expertise p, .edit-profile-box .edit-save button, .profile .profile-head .nickname .overlay .star button, .profile .profile-head .nickname .overlay .edit-profile a, .profile nav .normal-nav ul li a, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-button, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .title-box .add-advice, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list a, header .search-worker input[type=submit], header .logo-box .sign-list li a, header .logo-box .sign-list li:last-child a, header .title h1 a, header .title .advice li a, header .try a, header .for-phone, header .for-phone .overlay, header .for-phone .overlay a, header .scroll-down a, .join-modal__btn, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try, .sign-wrapper .sign .sign-up button, .sign-wrapper .sign .sign-up p a, .answer-box .overlay-answer__bg, .question-data .next-question {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+header .logo-box .sign-list li:last-child a, header .try a, .join .join-btn .join-btn__try, .info .info-btn .info-btn__try, .instruction .instruction-btn .instruction-btn__try {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 170px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer; }
+
+header .logo-box .sign-list li:last-child a:hover, header .try a:hover {
+  background: #fff;
+  color: #3d93e3; }
+
+.add-advice__form .advice-wrap, .profile-info .profile-recommendation .recommendation-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+.advice-list .advice-list__title, .add-advice__form .advice-head, .users .users-list__title, .edit-profile-box h1, .profile-info .profile-info__title, .advice-box .advice-box__title, .advice-box .advice-info .advice-step__box h4, .join .join-title h2 {
+  font-weight: 400;
+  margin-bottom: 20px; }
+  .advice-list .advice-list__title::before, .add-advice__form .advice-head::before, .users .users-list__title::before, .edit-profile-box h1::before, .profile-info .profile-info__title::before, .advice-box .advice-box__title::before, .advice-box .advice-info .advice-step__box h4::before, .join .join-title h2::before {
+    content: '';
+    display: block;
+    background: #3d93e3;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px; }
+
+.advice-list .advice-list__box .advice-list__info .advice-info__box, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list, .advice-box .advice-info .advice-step__box .advice-step li {
+  padding-left: 25px;
+  border-left: 1px solid #EAEAEA;
+  position: relative; }
+  .advice-list .advice-list__box .advice-list__info .advice-info__box::after, .profile-info .profile-recommendation .recommendation-wrapper .recommendation-tab .tab-item .recommendation-list::after, .advice-box .advice-info .advice-step__box .advice-step li::after {
+    content: '';
+    border: 3px solid #fff;
+    background: #3d93e3;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    left: -9px;
+    position: absolute;
+    top: 10px; }
+
+.question h1 {
+  text-align: center;
+  color: #141414;
+  font-size: 1.9em;
+  padding: 20px 10px; }
+
+.answer-box .test-answer-a,
+.answer-box .test-answer-b {
+  display: block;
+  width: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.7em;
+  color: #ffffff;
+  padding: 13% 0;
+  position: relative; }
+  .answer-box .test-answer-a input[type=radio],
+  .answer-box .test-answer-b input[type=radio] {
+    opacity: 0;
+    outline: none; }
+  .answer-box .test-answer-a input[type=radio]:checked + .overlay-answer__bg,
+  .answer-box .test-answer-b input[type=radio]:checked + .overlay-answer__bg {
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
+.answer-box .overlay-answer__bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 998; }
+.answer-box .overlay-answer__text {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  margin: 20% 35%; }
+.answer-box .test-answer-a {
+  background-image: linear-gradient(135deg, #FEB692 10%, #EA5455 100%); }
+  .answer-box .test-answer-a:hover .overlay-answer__bg {
+    opacity: 1; }
+.answer-box .test-answer-b {
+  background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%); }
+  .answer-box .test-answer-b:hover .overlay-answer__bg {
+    opacity: 1; }
+
+.question-data {
+  box-shadow: -3px 4px 49px -5px rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  text-align: center;
+  padding-top: 40px; }
+  .question-data .next-question {
+    text-align: center;
+    background: none;
+    border: 2px solid #3d93e3;
+    color: #3d93e3;
+    border-radius: 5px;
+    padding: 7px 50px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 5px; }
+    .question-data .next-question:hover {
+      background: #3d93e3;
+      color: #fff; }
+    .question-data .next-question:active {
+      background: #193f63; }
+
+.uk-open > .uk-modal-dialog {
+  transform: translateY(0) !important; }
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: 0 auto; }
+
+a:hover {
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit; }
+
+.delete-svg {
+  background: none !important; }
+  .delete-svg svg:first-child {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */

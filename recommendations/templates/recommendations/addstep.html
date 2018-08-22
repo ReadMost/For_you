@@ -1,0 +1,73 @@
+{% extends 'static_pages/parent.html' %}
+{% load static %}
+{% block title %} Add Step {% endblock %}
+{% block content %}
+<div id="app">
+   {% include 'static_pages/partials/header_nav.html' %}
+
+   <div class="add-advice__form">
+      <div class="advice-wrap">
+         <h2 class="advice-head">Добавить рекомендацию</h2>
+
+         <form action="{% url 'recommendations:addstep' recommendation_id %}" method='POST'>
+            {% csrf_token %}
+            <h5 style="color:red;">{{ step_form.errors }}</h5>
+
+            <input type="hidden" name="form-TOTAL_FORMS" value="2" id="id_form-TOTAL_FORMS" />
+            <input type="hidden" name="form-INITIAL_FORMS" value="0" id="id_form-INITIAL_FORMS" />
+            <input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS" />
+            <input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS" />
+
+            <div class="steps">
+               <p class="form-text">Этапы к достижению цели</p>
+               <p class="steps-text">Этапы</p>
+               <input class="input-text"  name = "step_title" type="text" placeholder="Заголовок этапа">
+               <div class="sub-step">
+                  <p class="steps-text">Как учить?</p>
+
+                  <div id="how-learn-box" class="how-learn">
+                     <div id="how-to-learn-box" class="how-to-learn">
+                        <div class="how-to-learn__delete">
+                           <i class="fa fa-minus-circle" aria-hidden="true" onclick="removeDesc(0);"
+                              title="Удалить поле"></i>
+                        </div>
+                        <div id="input-box" class="how-to-learn__add">
+                           <input class="input-text" name="form-0-description" type="text" placeholder="Краткое описание">
+                           <input class="input-text" name="form-0-link" type="text" placeholder="Cсылка на материал"><hr>
+                        </div>
+                     </div>
+
+                     
+                     <div id="how-to-learn-box" class="how-to-learn">
+                        <div class="how-to-learn__delete">
+                           <i class="fa fa-minus-circle" aria-hidden="true" onclick="removeDesc(1);"
+                              title="Удалить поле"></i>
+                        </div>
+                        <div id="input-box" class="how-to-learn__add">
+                           <input class="input-text" name="form-1-description" type="text" placeholder="Краткое описание">
+                           <input class="input-text" name="form-1-link" type="text" placeholder="Cсылка на материал"><hr>
+                        </div>
+                     </div>
+                  </div>
+
+                  <p class="add-icon">
+                     <i class="fa fa-plus-circle" aria-hidden="true" onclick="addDesc();" title="Добавить поле"></i>
+                  </p>
+                  <div class="next flex">
+                     {% comment %} <div>
+                        <a class="back-btn step-btn link-to-next">Назад</a>
+                     </div> {% endcomment %}
+                     <div>
+                        <input class="next-btn step-btn" name='submit_status' type="submit" value="Add">
+                        <input class="next-btn step-btn" name='submit_status' type="submit" value="finish">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+
+
+      </div>
+   </div>
+</div>
+{% endblock %}

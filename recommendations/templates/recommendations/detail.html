@@ -1,0 +1,73 @@
+{% extends 'static_pages/parent.html' %}
+{% load recommendation_filter %}
+{% block title %} Recommendations {% endblock %}
+{% block content %}
+<div id="app">
+   {% include 'static_pages/partials/header_nav.html' %}
+
+   <div class="advice-box">
+      <h2 class="advice-box__title">Рекомендация</h2>
+      <div class="advice-info">
+         <h3 class="advice-title">{{ recommendation.title }} - ({{ recommendation.profession.name }}) 
+            {% if recommendation.user == recommendation.user %}
+                  <a href="{% url 'recommendations:addstep' recommendation.id  %}">Add Step</a>    
+            {% endif %}  
+         </h3>
+         <div class="flex">
+            <p class="advice-date">19/07/2018 - дата создание</p>
+            <p class="advice-author">Автор - <a href="#">{{ recommendation.user.username }}</a></p>
+         </div>
+         <p class="advice-desc">{{ recommendation.description }}</p>
+
+         <div class="advice-like">
+            <a href="{% url 'recommendations:like' recommendation.id %}">
+               <i class="fa fa-heart-o" aria-hidden="true"></i> {{ recommendation|like_unlike:user }}
+               {{ recommendation.like_set.count }}
+            </a>
+         </div>
+
+         <div class="advice-save">
+            <a href="{% url 'recommendations:saver' recommendation.id %}">
+               <i class="fa fa-bookmark-o" aria-hidden="true"></i> {{ recommendation|save_unsave:user }}
+               {{ recommendation.saver_set.count }}
+            </a>
+         </div>
+
+         {% for step in recommendation.step_set.all %}
+            <div class="advice-step__box">
+               <h4>{{ step.title }}</h4>
+                  <ul class="advice-step">
+                     {% for bullet in step.bullet_set.all %}
+                        <li>{{ bullet.description }}
+                           <a href="#">( {{ bullet.link }} )</a>
+                        </li>
+                     {% endfor %}
+                  </ul>
+            </div>
+         {% endfor %}
+
+         <div class="comments">
+            <h2 class="advice-box__title">Комментарий</h2>
+            <form action="{% url 'recommendations:comment' %}" method='POST'>
+               {% csrf_token %}
+               {{ comment_form }}
+               <input name='recommendation_id' type='hidden' value="{{ recommendation.id }}"/>
+            </form>
+
+            {% for comment in recommendation.comment_set.all %}
+               <div class="comment-list">
+                  <div class="comment-author-ava">
+                     <img src="https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426">
+                  </div>
+                  <div class="comment-text-box">
+                     <p class="comment-author">{{ comment.user.email }}</p>
+                     <p class="comment-text">{{ comment.text }}<p/>
+                  </div>
+               </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

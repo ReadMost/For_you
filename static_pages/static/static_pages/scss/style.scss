@@ -1,0 +1,55 @@
+@import url(../styles/icomoon.css);
+@import url(../styles/uikit.min.css);
+@import url(../styles/font-awesome.min.css);
+
+@import 'advice-list';
+@import 'add-advice';
+@import 'users-list';
+@import 'partials';
+@import 'profile';
+@import 'header';
+@import 'advice';
+@import 'join';
+@import 'sign';
+@import 'test';
+
+.uk-open > .uk-modal-dialog {
+   transform: translateY(0) !important;
+}
+
+body {
+   @extend %reset-space;
+   font-size: $mainSize;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+   max-width: 1200px;
+   padding: 0 50px;
+   margin: 0 auto;
+}
+
+a {
+   &:hover {
+      text-decoration: none;
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   color: inherit;
+}
+
+.delete-svg {
+   background: none !important;
+
+   svg {
+      &:first-child {
+         display: none;
+      }
+   }
+}

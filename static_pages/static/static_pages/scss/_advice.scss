@@ -1,0 +1,201 @@
+@import 'partials';
+
+.advice-box {
+   background: #F5F5F5;
+   padding: 50px;
+
+   .advice-box__title {
+      @extend %header-text;
+      font-size: 2em;
+      color: $secondColor !important;
+   }
+
+   .advice-info {
+      max-width: 80%;
+      margin: 0 auto;
+
+      .flex {
+         align-items: flex-start;
+         margin-bottom: 10px;
+         margin-top: 3px;
+
+         .advice-author {
+            font-size: $mainSize - 2px;
+
+            a {
+               font-style: italic;
+
+               &:hover {
+                  text-decoration: underline;
+                  color: $primaryColor;
+               }
+            }
+         }
+      }
+
+      .advice-title {
+         color: $secondColor !important;
+         font-size: 2em;
+      }
+
+      .advice-date {
+         font-size: $mainSize - 2px;
+         font-style: italic;
+      }
+
+      .advice-desc {
+         color: $secondColor;
+         font-size: $mainSize + 2px;
+      }
+
+      .advice-like,
+      .advice-save {
+         i {
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+         }
+      }
+
+      .advice-step__box {
+         margin: 50px 0;
+
+         h4 {
+            @extend %header-text;
+            margin: 20px 0;
+            color: $secondColor !important;
+            font-size: 1.5em;
+         }
+
+         .advice-step {
+            font-size: $mainSize + 2px;
+            color: $secondColor;
+
+            li {
+               @extend %list;
+               padding-top: 20px;
+               border-left: 1px solid #666666 !important;
+
+               &:first-child {
+                  padding-top: 0px;
+               }
+
+               &:first-child::after {
+                  top: 5px !important;
+               }
+
+               &::after {
+                  border: 3px solid #F5F5F5 !important;
+                  left: -8px !important;
+                  top: 25px !important;
+               }
+            }
+         }
+      }
+   }
+}
+
+.comments {
+   margin-top: 100px;
+
+   form {
+      margin-bottom: 30px;
+
+      input {
+         width: 100%;
+         outline: none;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         padding: 7px 0;
+         border: none;
+         border-bottom: 1px solid $darkColor;
+         background: none;
+      }
+   }
+
+   .comment-list {
+      @extend %justify-flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      color: $secondColor;
+
+      .comment-author-ava {
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      .comment-text-box {
+         width: 95%;
+
+         .comment-author {
+            font-weight: 700;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 977px) {
+   .advice-info {
+      max-width: 100% !important;
+   }
+}
+
+@media screen and (max-width: 546px) {
+   .advice-box {
+      padding: 50px 20px;
+
+      .advice-box__title {
+         font-size: 1.8em;
+      }
+
+      .advice-info {
+         .advice-title {
+            font-size: 1.8em;
+         }
+
+         .advice-desc {
+            font-size: $mainSize !important;
+         }
+
+         .flex {
+            display: block;
+         }
+
+         .advice-step__box {
+            h4 {
+               font-size: 1.4em;
+            }
+
+            .advice-step {
+               font-size: $mainSize;
+
+               li {
+                  &:first-child {
+                     //padding-top: 0px;
+                  }
+
+                  &:first-child::after {
+                     //top: 5px;
+                  }
+
+                  &::after {
+                     content: '';
+                     height: 8px;
+                     width: 8px;
+                     left: -7px;
+                     top: 25px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

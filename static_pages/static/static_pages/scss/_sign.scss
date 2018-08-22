@@ -1,0 +1,83 @@
+@import 'partials';
+
+.sign-wrapper {
+   max-width: 380px;
+   padding: 0 15px;
+   margin: 0 auto;
+   text-align: center;
+
+   .sign {
+      margin-top: 55px;
+
+      .logo {
+         span {
+            font-size: 70px;
+         }
+
+         p {
+            font-size: 1.5em;
+            margin-bottom: 38px;
+         }
+      }
+
+      .sign-up {
+         input {
+            width: 100%;
+            display: block;
+            margin-bottom: 15px;
+            padding: 13px 13px;
+            border-radius: 3px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #d6eafa;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            display: block;
+            line-height: 1.4em;
+            outline: none;
+         }
+
+         button {
+            @extend %transition;
+            cursor: pointer;
+            background-color: $primaryColor;
+            color: $headColor;
+            border: none;
+            width: auto;
+            padding: 10px 47px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            margin-top: 20px;
+            font-size: $mainSize - 2px;
+
+            &:hover {
+               background: #286196;
+            }
+
+            &:active {
+               background: #193f63;
+            }
+         }
+
+         .error {
+            color: #ff4f4f;   
+         }
+
+         p {
+            margin-top: 15px;
+
+            a {
+               @extend %transition;
+               color: $primaryColor;
+
+               &:hover {
+                  color: #193f63;
+               }
+            }
+         }
+      }
+   }
+}
